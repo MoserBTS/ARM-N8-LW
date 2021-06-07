@@ -1,0 +1,32 @@
+https://www.thethingsnetwork.org/
+
+eui-a840411bae64ffff
+
+ttn-account-v2.MNGnIhk1nls1DrxB9YUPJtCfzXFCq-1Db5ZiM8r69e1P3LVzI7utgqhA7kxKzqawjgiiYjSNGtdzlDuT7jJsgA
+
+ATO083 --------
+	bit 0=1 -> OTAA
+	bit 1=1 -> fenetre RX on
+	bit 2=0 -> Pas adaptive data rate (ADR) //voir ATO075 pour option et ATo76
+	bit 3=0 -> pas de Duty cycle
+	bit 4=0 -> pas adaptive chanel //voir ATO077
+	bit 5=0 -> pas adaptive Rx2 //voir ATO075 pour option
+	bit 6=0 -> Rx2 defaut data rate (0:SF9, 1:SF12)
+	bit 7=0 -> Lora public=0 ou private=1
+
+
+ATO086=0x00 -> pas de Sf8,9,10,11
+
+ATO080 confirmed/unconfirmed 
+
+ATO081=Ox02 ajoute MAC_LINK_CHECK_REG; Ox00: pas d'ajout
+
+ATO082: port de communisation
+
+ATO086 parametre du cycle OTAA
+
+ATO075: x x a a a b b b   aaa=Ox00 DR_SF12(Rx2)   bbb=Ox00 DR_SF12(Tx)
+
+ATO076: TX_POWER: -> x x x x x power power power ici Ox01->14dbm
+
+ATO077: FRx FRx FRx FRx FTx FTx FTx FTx ->Ox00 FRx=FTx=868,1MHz
